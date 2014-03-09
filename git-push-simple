@@ -1,0 +1,20 @@
+#! /bin/sh
+
+branch=`git name-rev --name-only HEAD`
+
+remote=`git config branch.$branch.remote`
+
+if [ -z $remote ]; then
+    echo "upstream is not set"
+    exit
+fi
+
+remote_branch=`git rev-parse --symbolic-full-name --abbrev-ref @{u}`
+
+if [ "$remote/$branch" != $remote_branch ]; then
+    echo "upstream branch is not the same name (current=$branch remote_branch=$remote_branch)"
+fi
+
+echo performing: git push $remote $branch
+
+git push $remote $branch
