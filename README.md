@@ -6,7 +6,7 @@ One purpose of this command is to prevent [this kind of incident](https://news.y
 
 ## Usage
 
-Put the script `git-push-simple` anywhere in $PATH.
+Put the script `git-push-simple` anywhere in your $PATH.
 
 Then:
 
@@ -14,4 +14,4 @@ Then:
 $ git push-simple
 ```
 
-This perform the command like `git push upstream HEAD`.
+This performs the command like `git push origin HEAD` if the upstream's branch name is the same as the current branch. This behaviour is the same as `git push` without parameter with `push.default` set to `simple`. (This configuration will be default in Git 2.0).
