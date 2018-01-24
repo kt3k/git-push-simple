@@ -1,6 +1,6 @@
 #! /bin/sh
 
-branch=`git name-rev --name-only HEAD`
+branch=`git rev-parse --abbrev-ref HEAD`
 
 remote=`git config branch.$branch.remote`
 
