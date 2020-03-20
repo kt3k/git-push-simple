@@ -20,7 +20,7 @@ This performs the command like `git push origin HEAD` if the upstream's branch n
 
 ```sh
 # Downdloads script
-wget https://raw.githubusercontent.com/kt3k/git-push-simple/master/git-push-simple
+curl https://raw.githubusercontent.com/kt3k/git-push-simple/master/git-push-simple -o git-push-simple
 
 # Make it executable
 chmod 755 git-push-simple
